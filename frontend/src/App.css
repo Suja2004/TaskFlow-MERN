@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Webkit Browsers (Chrome, Safari) */
+.TodoList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.TodoList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.TodoList::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.TodoList::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+.TodoList {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+body {
+  background: #007BFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  text-align: center;
+}
+
+.Login {
+  display: flex;
+  flex-direction: column;
+}
+
+
+h1 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.75rem;
+}
+
+.TodoWrapper {
+  background: #1A1A40;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.TodoList {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 10px;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input {
+  outline: none;
+  background: none;
+  border: 1px solid #3cf;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 300px;
+  color: #fff;
+}
+
+.TodoEdit input {
+  padding: .5rem .5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input::placeholder {
+  color: #ffffff4d;
+}
+
+.todo-btn,
+.save-btn {
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #1A1A40;
+}
+
+.Todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0056b3;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  animation: slideIn 0.4s ease-in-out;
+}
+
+.slide-out {
+  animation: slide-out 0.4s;
+}
+
+.Todo:hover {
+  background: #007BFF;
+  transform: scale(1.02);
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #fff;
+  cursor: pointer;
+}
+
+.completed {
+  color: #c5aeff;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+}
+
+.toggle-button button,
+.logout-btn {
+  background-color: #3cf;
+  width: 100%;
+  color: #fff;
+  border: none;
+  padding: 0.55rem;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: #e23030;
+}
+
+.del-btn {
+  color: #dc3545;
+}
+
+.toggle-button button:disabled {
+  display: none;
+}
+
+.password-strength.weak {
+  color: red;
+}
+
+.password-strength.medium {
+  color: orange;
+}
+
+.password-strength.strong {
+  color: green;
+}
+
+.error-message {
+  text-wrap: wrap;
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
