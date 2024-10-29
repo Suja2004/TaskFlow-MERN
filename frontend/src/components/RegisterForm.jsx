@@ -38,7 +38,7 @@ const RegisterForm = ({ onRegister }) => {
 
         try {
             setError('');
-            await axios.post('http://localhost:3000/register', {
+            await axios.post('https://dcinfotech-task-6-7-backend.onrender.com/register', {
                 username,
                 password,
             });
