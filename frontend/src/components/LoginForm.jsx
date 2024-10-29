@@ -15,10 +15,9 @@ const LoginForm = ({ onLogin }) => {
                 password,
             });
             localStorage.setItem('token', response.data.token);
-            onLogin(); // Update UI to indicate login success
+            onLogin(); 
         } catch (error) {
             if (error.response) {
-                // If response status is 401, show appropriate message
                 setError(error.response.data.message);
             } else {
                 setError('Login failed. Please try again.');
