@@ -144,7 +144,6 @@ app.delete('/todos/:id', authenticateJWT, async (req, res) => {
     res.status(204).send();
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
