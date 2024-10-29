@@ -17,7 +17,7 @@ const App = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:3000/todos', {
+            const response = await axios.get('https://dcinfotech-task-6-7-backend.onrender.com/todos', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
