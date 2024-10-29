@@ -10,7 +10,7 @@ const LoginForm = ({ onLogin }) => {
         e.preventDefault();
         try {
             setError('');
-            const response = await axios.post('http://localhost:3000/login', {
+            const response = await axios.post('https://dcinfotech-task-6-7-backend.onrender.com/login', {
                 username,
                 password,
             });
