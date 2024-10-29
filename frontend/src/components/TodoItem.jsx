@@ -12,7 +12,7 @@ const TodoItem = ({ todo, fetchTodos }) => {
         try {
             setIsDeleting(true);
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:3000/todos/${todo._id}`, {
+            await axios.delete(`https://dcinfotech-task-6-7-backend.onrender.com/todos/${todo._id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -28,7 +28,7 @@ const TodoItem = ({ todo, fetchTodos }) => {
         try {
             const token = localStorage.getItem('token');
 
-            await axios.put(`http://localhost:3000/todos/${todo._id}/complete`, {}, {
+            await axios.put(`https://dcinfotech-task-6-7-backend.onrender.com/todos/${todo._id}/complete`, {}, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -44,7 +44,7 @@ const TodoItem = ({ todo, fetchTodos }) => {
         try {
             const token = localStorage.getItem('token');
             console.log(token);
-            await axios.put(`http://localhost:3000/todos/${todo._id}`, { text: newText }, {
+            await axios.put(`https://dcinfotech-task-6-7-backend.onrender.com/todos/${todo._id}`, { text: newText }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
