@@ -10,7 +10,7 @@ const LoginForm = ({ onLogin }) => {
         e.preventDefault();
         try {
             setError('');
-            const response = await axios.post('https://dcinfotech-task-6-7-backend.onrender.com/login', {
+            const response = await axios.post('https://todo-backend-lyart.vercel.app/login', {
                 username,
                 password,
             });
