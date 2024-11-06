@@ -7,7 +7,6 @@ const RegisterForm = ({ onRegister }) => {
     const [error, setError] = useState('');
     const [passwordStrength, setPasswordStrength] = useState('');
 
-    // Function to check password strength
     const checkPasswordStrength = (password) => {
         const minLength = password.length >= 8;
         const hasNumber = /\d/.test(password);
@@ -38,7 +37,7 @@ const RegisterForm = ({ onRegister }) => {
 
         try {
             setError('');
-            await axios.post('https://dcinfotech-task-6-7-backend.onrender.com/register', {
+            await axios.post('https://todo-backend-lyart.vercel.app/register', {
                 username,
                 password,
             });
