@@ -17,7 +17,7 @@ const App = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('https://dcinfotech-task-6-7-backend.onrender.com/todos', {
+            const response = await axios.get('https://todo-backend-lyart.vercel.app/todos', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
