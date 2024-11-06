@@ -10,7 +10,7 @@ const TodoForm = ({ fetchTodos }) => {
 
         try {
             const token = localStorage.getItem('token');
-            await axios.post('https://dcinfotech-task-6-7-backend.onrender.com/todos', { text }, {
+            await axios.post('https://todo-backend-lyart.vercel.app/todos', { text }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
